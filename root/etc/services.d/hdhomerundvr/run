@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+UMASK_SET=${UMASK_SET:-022}
+
+umask "$UMASK_SET"
+exec \
+	s6-setuidgid abc /usr/local/bin/hdhomerun_record foreground \
+	--conf /config/hdhomerun.conf 
