@@ -10,5 +10,6 @@ services:
     - UMASK_SET=000 #optional
     - TZ=America/New_York
     volumes:
-      - /path/to/recordings:/dvrdata
+      - /Users/Greg/temp:/dvrdata
+      - /Users/Greg/opt/appdata:/config
     restart: unless-stopped
